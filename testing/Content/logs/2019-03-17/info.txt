@@ -1,0 +1,63 @@
+2019-03-17 10:49:35.1876|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 10:49:35.8756|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-17 10:49:39.3055|INFO|testing.MvcApplication|Cast Init
+2019-03-17 10:49:39.4425|INFO|testing.MvcApplication|Cast Init
+2019-03-17 10:50:58.9534|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 10:50:59.1974|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-17 10:51:04.2644|INFO|testing.MvcApplication|Cast Init
+2019-03-17 10:51:04.3064|INFO|testing.MvcApplication|Cast Init
+2019-03-17 15:14:14.8012|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 15:14:25.8280|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-17 15:14:29.2530|INFO|testing.MvcApplication|Cast Init
+2019-03-17 15:14:29.4420|INFO|testing.MvcApplication|Cast Init
+2019-03-17 16:35:48.2577|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 16:58:09.9363|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 17:01:27.9336|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 17:04:34.4560|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 17:05:31.8472|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 17:13:20.4318|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 17:18:22.0576|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 17:21:33.6310|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 17:22:42.4441|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 17:30:15.9768|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 17:49:51.3197|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 17:55:38.9609|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 17:56:35.4472|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 17:57:10.9007|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 22:00:50.3123|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 22:10:04.9224|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 22:10:14.7513|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-17 22:10:16.7293|INFO|testing.MvcApplication|Cast Init
+2019-03-17 22:10:16.9803|INFO|testing.MvcApplication|Cast Init
+2019-03-17 22:12:14.0728|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 22:12:18.0238|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-17 22:12:18.1938|INFO|testing.MvcApplication|Cast Init
+2019-03-17 22:12:18.3188|INFO|testing.MvcApplication|Cast Init
+2019-03-17 22:12:36.5805|INFO|testing.MvcApplication|Application Error
+2019-03-17 22:23:31.1351|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 22:23:42.2485|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-17 22:23:44.3555|INFO|testing.MvcApplication|Cast Init
+2019-03-17 22:23:44.5045|INFO|testing.MvcApplication|Cast Init
+2019-03-17 22:23:46.5115|INFO|testing.MvcApplication|Application Error
+2019-03-17 22:39:32.1342|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 22:39:41.6571|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-17 22:39:43.4201|INFO|testing.MvcApplication|Cast Init
+2019-03-17 22:39:43.5131|INFO|testing.MvcApplication|Cast Init
+2019-03-17 22:39:46.3741|INFO|testing.MvcApplication|Application Error
+2019-03-17 22:46:36.7899|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 22:46:41.3699|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-17 22:46:43.0629|INFO|testing.MvcApplication|Cast Init
+2019-03-17 22:46:43.1489|INFO|testing.MvcApplication|Cast Init
+2019-03-17 22:46:44.4788|INFO|testing.MvcApplication|Application Error
+2019-03-17 23:04:51.7183|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 23:05:46.9816|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 23:07:18.8285|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 23:09:54.8545|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 23:25:48.5226|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 23:27:31.2824|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 23:29:02.5952|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 23:30:50.6339|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 23:34:23.0602|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 23:37:16.3091|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 23:42:20.6213|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-17 23:47:25.3885|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart

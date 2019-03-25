@@ -1,0 +1,76 @@
+﻿@using DevExtreme.AspNet.Data
+@using DevExtreme.AspNet.Mvc
+
+@{
+    ViewBag.Title = "Отчет";
+}
+
+<h2>
+    отчет в виде результирующей таблицы и графика по всем
+    ответам всех тестируемых (количество правильных и неправильных
+    ответов) на все вопросы.
+</h2>
+
+<table border="1">
+    <tr>
+        <td><p>Вопрос</p></td>
+        <td><p>Кол-во правильных</p></td>
+        <td><p>Кол-ва не правильных</p></td>
+    </tr>
+    @foreach (var b in ViewBag.Results)
+    {
+        <tr>
+            <td><p>@b.Number</p></td>
+            <td><p>@b.CountRight</p></td>
+            <td><p>@b.CountWrong</p></td>
+        </tr>
+    }
+</table>
+
+@(Html.DevExtreme().DataGrid()
+        .ID("dataGrid")
+        .DataSource(ViewBag.Results)
+       // .DataSource(d => d.WebApi()
+      //  .RouteName("Home")
+      //  .LoadAction("Report")
+      //  .Key("Number")
+       // )
+)
+
+@(Html.DevExtreme().Chart()
+                        .ID("chart")
+                        .CommonSeriesSettings(s => s
+                        .ArgumentField("Number")
+                        .Type(SeriesType.FullStackedBar)
+                    //  .Type(SeriesType.StackedBar)
+                    )
+                    .Series(s =>
+                    {
+                        s.Add().ValueField("CountRight").Name("Правильно");
+                        s.Add().ValueField("CountWrong").Name("Не правильно");
+                    })
+
+            .Legend(l => l
+                    .VerticalAlignment(VerticalEdge.Top)
+                    .HorizontalAlignment(HorizontalAlignment.Center)
+                    .ItemTextPosition(Position.Right)
+                )
+
+
+            .Title(t => t
+                    .Text("График по всем ответам всех тестируемых(кол-во правильных и неправильных ответов) на все вопросы")
+                    .Subtitle(s => s.Text("Кол-во"))
+                )
+        .Export(e => e.Enabled(true))
+            .Tooltip(t => t
+                .Enabled(true)
+                .CustomizeTooltip(@<text>
+                    function(arg) {
+                    return {
+                    text: arg.percentText + " - " + arg.valueText
+                    };
+                    }
+                </text>)
+                            )
+                    .DataSource(ViewBag.Results)
+)

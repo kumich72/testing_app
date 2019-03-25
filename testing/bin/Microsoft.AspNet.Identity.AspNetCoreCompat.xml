@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNet.Identity.AspNetCoreCompat</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.AspNet.Identity.CoreCompat.IdentityRole.#ctor">
+            <summary>
+                Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.CoreCompat.IdentityRole.#ctor(System.String)">
+            <summary>
+                Constructor
+            </summary>
+            <param name="roleName"></param>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.CoreCompat.IdentityRole`2.NormalizedName">
+            <summary>
+                Normalized role name
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.CoreCompat.IdentityRole`2.ConcurrencyStamp">
+            <summary>
+                Concurrency stamp 
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.CoreCompat.IdentityRole`2.Claims">
+            <summary>
+                Navigation property for claims in the role
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.CoreCompat.IdentityRoleClaim`1">
+            <summary>
+                EntityType that represents one specific role claim
+            </summary>
+            <typeparam name="TKey"></typeparam>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.CoreCompat.IdentityRoleClaim`1.Id">
+            <summary>
+                Primary key
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.CoreCompat.IdentityRoleClaim`1.RoleId">
+            <summary>
+                User Id for the role this claim belongs to
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.CoreCompat.IdentityRoleClaim`1.ClaimType">
+            <summary>
+                Claim type
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.CoreCompat.IdentityRoleClaim`1.ClaimValue">
+            <summary>
+                Claim value
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.CoreCompat.IdentityUser.#ctor">
+            <summary>
+                Constructor which creates a new Guid for the Id
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.CoreCompat.IdentityUser.#ctor(System.String)">
+            <summary>
+                Constructor that takes a userName
+            </summary>
+            <param name="userName"></param>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.CoreCompat.IdentityUser`4.NormalizedEmail">
+            <summary>
+                Normalized email
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.CoreCompat.IdentityUser`4.ConcurrencyStamp">
+            <summary>
+                Concurrency stamp
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.CoreCompat.IdentityUserLogin`1">
+            <summary>
+            Represents a login and its associated provider for a user.
+            </summary>
+            <typeparam name="TKey">The type of the primary key of the user associated with this login.</typeparam>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.CoreCompat.IdentityUserLogin`1.ProviderDisplayName">
+            <summary>
+            Gets or sets the friendly name used in a UI for this login.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.CoreCompat.UserStore`1.#ctor">
+            <summary>
+                Default constuctor which uses a new instance of a default EntityDbContext.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.CoreCompat.UserStore`1.#ctor(System.Data.Entity.DbContext)">
+            <summary>
+                Constructor
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.CoreCompat.UserStore`6.#ctor(System.Data.Entity.DbContext)">
+            <summary>
+                Constructor
+            </summary>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>

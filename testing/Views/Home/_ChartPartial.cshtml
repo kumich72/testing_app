@@ -1,0 +1,10 @@
+@using DevExtreme.AspNet.Data
+@using DevExtreme.AspNet.Mvc
+
+
+@Html.DevExpress().Chart(settings => {
+    settings.Name = "Chart";
+    settings.Series.Add(s => {
+        s.SetDataMembers("Number", "CountRight");
+    });
+}).Bind(Model).GetHtml()

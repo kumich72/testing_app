@@ -1,0 +1,43 @@
+﻿@using DevExtreme.AspNet.Data
+@using DevExtreme.AspNet.Mvc
+
+@model testing.Models.LoginDto
+
+@{
+    ViewData["Title"] = "Вход";
+}
+
+<h2>Вход для зарегистированных пользователей</h2>
+
+@if (Session["Login"] == null)
+{
+    using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div>
+            <h4>Вход</h4>
+            <hr />
+            @Html.ValidationSummary(false)
+            Логин
+            <div>
+                @Html.EditorFor(model => model.Login)
+            </div>
+            <div>
+                Пароль
+                <div>
+                    @Html.EditorFor(model => model.Password)
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="submit" value="Войти" />
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <h2 style="color:red">Вы уже авторизовались!</h2>
+}

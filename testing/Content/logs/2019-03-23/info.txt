@@ -1,0 +1,69 @@
+2019-03-23 10:36:53.0827|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 10:37:24.2142|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 10:37:24.5709|INFO|testing.MvcApplication|Cast Init
+2019-03-23 10:37:24.7827|INFO|testing.MvcApplication|Cast Init
+2019-03-23 10:38:01.4177|INFO|testing.MvcApplication|Cast Init
+2019-03-23 10:38:03.8355|INFO|testing.MvcApplication|Cast Application Dispose
+2019-03-23 10:43:11.9084|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 10:43:13.2122|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 10:43:13.3471|INFO|testing.MvcApplication|Cast Init
+2019-03-23 10:43:13.3880|INFO|testing.MvcApplication|Cast Init
+2019-03-23 10:45:11.3969|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 10:45:12.4969|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 10:45:12.6238|INFO|testing.MvcApplication|Cast Init
+2019-03-23 10:45:12.6667|INFO|testing.MvcApplication|Cast Init
+2019-03-23 10:47:02.0783|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 10:47:03.0484|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 10:47:03.1843|INFO|testing.MvcApplication|Cast Init
+2019-03-23 10:47:03.2242|INFO|testing.MvcApplication|Cast Init
+2019-03-23 10:53:04.2864|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 10:53:05.3025|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 10:53:05.4234|INFO|testing.MvcApplication|Cast Init
+2019-03-23 10:53:05.4623|INFO|testing.MvcApplication|Cast Init
+2019-03-23 10:55:31.2711|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 10:55:32.2473|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 10:55:32.3732|INFO|testing.MvcApplication|Cast Init
+2019-03-23 10:55:32.4141|INFO|testing.MvcApplication|Cast Init
+2019-03-23 14:04:17.4896|INFO|testing.MvcApplication|Application Error
+2019-03-23 21:14:06.2952|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 21:14:46.4920|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 21:15:08.2150|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:15:08.8304|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:15:20.0044|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:15:54.7541|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 21:15:56.4436|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 21:15:56.6085|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:16:06.9911|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:19:35.5136|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:19:35.5136|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:19:35.5136|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:19:55.0990|INFO|testing.MvcApplication|Cast Application Dispose
+2019-03-23 21:20:25.1120|INFO|testing.MvcApplication|Cast Application Dispose
+2019-03-23 21:20:55.1270|INFO|testing.MvcApplication|Cast Application Dispose
+2019-03-23 21:23:55.3859|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:52:22.5036|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 21:52:55.6168|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 21:53:14.3859|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:53:19.6971|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:54:13.4868|INFO|testing.MvcApplication|Application Error
+2019-03-23 21:56:19.8871|INFO|testing.MvcApplication|Application Error
+2019-03-23 21:57:56.3803|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 21:58:03.3920|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 21:58:19.1368|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:58:29.9081|INFO|testing.MvcApplication|Cast Init
+2019-03-23 21:59:19.8832|INFO|testing.MvcApplication|Application Error
+2019-03-23 22:01:19.6715|INFO|testing.MvcApplication|Application Error
+2019-03-23 22:02:10.0212|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 22:02:16.2436|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 22:02:16.4104|INFO|testing.MvcApplication|Cast Init
+2019-03-23 22:02:35.2795|INFO|testing.MvcApplication|Cast Init
+2019-03-23 22:05:37.6145|INFO|testing.MvcApplication|Application Error
+2019-03-23 22:07:23.8849|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 22:07:26.9531|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 22:07:48.2400|INFO|testing.MvcApplication|Cast Init
+2019-03-23 22:07:54.7257|INFO|testing.MvcApplication|Cast Init
+2019-03-23 22:13:36.3305|INFO|testing.MvcApplication|Application Error
+2019-03-23 22:15:48.2868|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-23 22:15:54.7930|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-23 22:16:10.9984|INFO|testing.MvcApplication|Cast Init
+2019-03-23 22:16:14.9029|INFO|testing.MvcApplication|Cast Init

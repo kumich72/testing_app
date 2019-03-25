@@ -1,0 +1,5 @@
+2019-03-16 23:19:42.7605|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-16 23:20:01.5353|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-16 23:20:08.7532|INFO|testing.MvcApplication|Cast Init
+2019-03-16 23:20:08.9602|INFO|testing.MvcApplication|Cast Init
+2019-03-16 23:23:41.4823|INFO|testing.MvcApplication|Application Error

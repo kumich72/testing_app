@@ -1,0 +1,48 @@
+﻿@using DevExtreme.AspNet.Data
+@using DevExtreme.AspNet.Mvc
+
+@model testing.Models.TestCommonDto
+@{
+    ViewBag.Title = "Тестирование";
+}
+<h2>@ViewBag.Title</h2>
+
+
+@if (Session["Login"] == null)
+{
+    using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+<div>
+    <hr />
+
+        <h4>Название теста: @ViewBag.test.Name</h4>
+        @foreach (var question in @ViewBag.test.TestQuestionsDto)
+        {
+            <div>
+                <div>@question.Name</div>
+                @foreach (var answers in question.TestAnswersDto)
+                {
+                    string nameRb = "rb_" + question.Id + "_" + answers.Id;
+                    string txtAns = answers.Name;
+
+                    //@Html.RadioButton(nameRb.ToString(), answers.Name);
+                    //@Html.RadioButton("", answers.Name);
+                    @answers.Name: @Html.RadioButton(nameRb, txtAns);
+                                                 <span>@answers.Name</span> <br />
+                 }
+            </div>
+        }
+
+    <div>
+        <input type="submit" value="Сдать тест!" />
+
+    </div>
+</div>
+    }
+}
+else
+{
+    <h2 style = "color:red" > Вам необходимо пройти авторизацию!</h2>
+    @Html.ActionLink("LoginIn", "LoginIn", "Home")
+}
