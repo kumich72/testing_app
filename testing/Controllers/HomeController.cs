@@ -45,10 +45,23 @@ namespace testing.Controllers
         {
             //id теста для выгрузки
             var id = 1;
+            var countRight = 0;
+            var countWrong = 0;
             foreach (var key in fc.AllKeys)
             {
-                var value = fc[key];
-                var ans = ResultsService.AddAnswer(value, Session["Login"])
+                if(key.contain("rb"))
+                {
+                    var value = fc[key];    
+                    var answerSave = ResultsService.AddAnswer(value, Session["Login"]);
+                    var isAnswerRight  = ResultsService.IsAnswerRight(value);
+                    if(isAnswerRight)
+                    {
+                        countRight++;
+                    }else
+                    {
+                        countWrong++;
+                    }
+                }
             }
 
             //foreach (var key in fc.Keys)
