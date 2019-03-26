@@ -19,26 +19,29 @@
         <h4>Название теста: @ViewBag.test.Name</h4>
         @foreach (var question in @ViewBag.test.TestQuestionsDto)
         {
+        <div>
+            <div>@question.Name</div>
+            @foreach (var answers in question.TestAnswersDto)
+            {
+                string nameQRb = "rb_" + question.Id ;
+                string nameRb = "rb_" + question.Id + "_" + answers.Id;
+                string txtAns = answers.Name;
+                string txtId = answers.Id.ToString();
+
+                //@Html.RadioButton(nameRb.ToString(), answers.Name);
+                //@Html.RadioButton("", answers.Name);
             <div>
-                <div>@question.Name</div>
-                @foreach (var answers in question.TestAnswersDto)
-                {
-                    string nameRb = "rb_" + question.Id + "_" + answers.Id;
-                    string txtAns = answers.Name;
-
-                    //@Html.RadioButton(nameRb.ToString(), answers.Name);
-                    //@Html.RadioButton("", answers.Name);
-                    @answers.Name: @Html.RadioButton(nameRb, txtAns);
-                                                 <span>@answers.Name</span> <br />
-                 }
+                @answers.Name: <span> @Html.RadioButton(nameQRb, txtId, new { Name = nameQRb , Id = nameRb , Value = answers.Id })</span> <br />
             </div>
-        }
+                    }
+                </div>
+            }
 
-    <div>
-        <input type="submit" value="Сдать тест!" />
+            <div>
+                <input type="submit" value="Сдать тест!" />
 
-    </div>
-</div>
+            </div>
+        </div>
     }
 }
 else

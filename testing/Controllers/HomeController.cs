@@ -40,6 +40,27 @@ namespace testing.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult TestPage(FormCollection fc)
+        {
+            //id теста для выгрузки
+            var id = 1;
+            foreach (var key in fc.AllKeys)
+            {
+                var value = fc[key];
+                var ans = ResultsService.AddAnswer(value, Session["Login"])
+            }
+
+            //foreach (var key in fc.Keys)
+            //{
+              //  var value = fc[key.ToString()];
+                // etc.
+            //}
+            //var results = TestsService.GetTest(id);
+            //ViewBag.test = results;
+            return View(id);
+        }
+
         public ActionResult Register()
         {
             var newUser = new UserDto();
