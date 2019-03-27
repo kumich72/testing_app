@@ -1,0 +1,14 @@
+2019-03-27 07:20:19.3812|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-27 07:20:30.5831|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-27 07:20:30.9817|INFO|testing.MvcApplication|Cast Init
+2019-03-27 07:20:33.8681|INFO|testing.MvcApplication|Cast Init
+2019-03-27 07:23:16.2410|INFO|testing.MvcApplication|Application Error
+2019-03-27 07:31:57.1054|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-27 07:32:16.2342|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-27 07:32:40.1057|INFO|testing.MvcApplication|Cast Init
+2019-03-27 07:32:40.5633|INFO|testing.MvcApplication|Cast Init
+2019-03-27 07:37:22.6965|INFO|testing.App_Start.PreStartApp|Doing something in  PreStart
+2019-03-27 07:37:31.6084|INFO|testing.MvcApplication|Let's Application Start!
+2019-03-27 07:37:49.3445|INFO|testing.MvcApplication|Cast Init
+2019-03-27 07:37:49.6152|INFO|testing.MvcApplication|Cast Init
+2019-03-27 07:41:39.6922|INFO|testing.MvcApplication|Application Error

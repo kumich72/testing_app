@@ -15,8 +15,7 @@ namespace testing.Controllers
 
     public class HomeController : Controller
     {
-
-        
+        private static NLog.Logger Nlogger = NLog.LogManager.GetCurrentClassLogger();
 
         private ApplicationUserManager UserManager
         {
@@ -43,35 +42,35 @@ namespace testing.Controllers
         [HttpPost]
         public ActionResult TestPage(FormCollection fc)
         {
-            //id теста для выгрузки
-            var id = 1;
             var countRight = 0;
             var countWrong = 0;
+            var error = "";
             foreach (var key in fc.AllKeys)
             {
-                if(key.contain("rb"))
+                if(key.Contains("rb"))
                 {
-                    var value = fc[key];    
-                    var answerSave = ResultsService.AddAnswer(value, Session["Login"]);
-                    var isAnswerRight  = ResultsService.IsAnswerRight(value);
-                    if(isAnswerRight)
+                    try
                     {
-                        countRight++;
-                    }else
+                        var value = fc[key];
+                        ResultQuery resultQuery = ResultsService.AddAnswer(value, Session["Login"].ToString());
+                        bool isAnswerRight = ResultsService.IsAnswerRight(value);
+                        if (isAnswerRight)
+                        {
+                            countRight++;
+                        }
+                        else
+                        {
+                            countWrong++;
+                        }
+                    }
+                    catch (Exception ex)
                     {
-                        countWrong++;
+                        Nlogger.Error("Error in TestPage save result. " + ex.Message);
                     }
                 }
             }
-
-            //foreach (var key in fc.Keys)
-            //{
-              //  var value = fc[key.ToString()];
-                // etc.
-            //}
-            //var results = TestsService.GetTest(id);
-            //ViewBag.test = results;
-            return View(id);
+            ViewBag.results = new ResultDto { CountRight = countRight, CountWrong = countWrong , Error = error};
+            return View();
         }
 
         public ActionResult Register()
@@ -119,8 +118,6 @@ namespace testing.Controllers
             
             return View();
         }
-
-
 
         public ActionResult ResultGraphic()
         {

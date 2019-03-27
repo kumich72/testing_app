@@ -2,13 +2,14 @@
 @using DevExtreme.AspNet.Mvc
 
 @model testing.Models.TestCommonDto
+    
 @{
     ViewBag.Title = "Тестирование";
 }
 <h2>@ViewBag.Title</h2>
 
 
-@if (Session["Login"] == null)
+@if (Session["Login"] != null)
 {
     using (Html.BeginForm())
     {
@@ -16,36 +17,53 @@
 <div>
     <hr />
 
-        <h4>Название теста: @ViewBag.test.Name</h4>
-        @foreach (var question in @ViewBag.test.TestQuestionsDto)
-        {
+
+    @if (ViewBag.results != null)
+    {
+        <table border="1">
+            <tr>
+                <td><p>Кол-во правильных</p></td>
+                <td><p>Кол-ва не правильных</p></td>
+            </tr>
+            <tr>
+                <td><p>@ViewBag.results.CountRight</p></td>
+                <td><p>@ViewBag.results.CountWrong</p></td>
+            </tr>
+        </table>
+    }
+    else
+    {
+    <h4>Название теста: @ViewBag.test.Name</h4>
+    foreach (var question in @ViewBag.test.TestQuestionsDto)
+    {
         <div>
             <div>@question.Name</div>
             @foreach (var answers in question.TestAnswersDto)
             {
-                string nameQRb = "rb_" + question.Id ;
+                string nameQRb = "rb_" + question.Id;
                 string nameRb = "rb_" + question.Id + "_" + answers.Id;
                 string txtAns = answers.Name;
                 string txtId = answers.Id.ToString();
 
                 //@Html.RadioButton(nameRb.ToString(), answers.Name);
                 //@Html.RadioButton("", answers.Name);
-            <div>
-                @answers.Name: <span> @Html.RadioButton(nameQRb, txtId, new { Name = nameQRb , Id = nameRb , Value = answers.Id })</span> <br />
-            </div>
-                    }
+                <div>
+                    @answers.Name: <span> @Html.RadioButton(nameQRb, txtId, new { Name = nameQRb, Id = nameRb, Value = question.Id + "_" + answers.Id + "_" + answers.Name })</span> <br />
                 </div>
             }
-
-            <div>
-                <input type="submit" value="Сдать тест!" />
-
-            </div>
         </div>
+    }
+
+    <div>
+        <input type="submit" value="Сдать тест!" />
+
+    </div>
+    }
+</div>
     }
 }
 else
 {
-    <h2 style = "color:red" > Вам необходимо пройти авторизацию!</h2>
+    <h2 style="color:red"> Вам необходимо пройти авторизацию!</h2>
     @Html.ActionLink("LoginIn", "LoginIn", "Home")
 }

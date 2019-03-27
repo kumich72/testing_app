@@ -1,12 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace testing.Models
 {
+    [Table("Answers")]
     public class Answer
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        [Column("Question_Id")]
         public Question Question { get; set; }
+        [Column("IsRight")] 
         public bool IsRight { get; set; }
     }
 

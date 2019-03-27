@@ -11,10 +11,20 @@ namespace testing.Utils
         public string Number { get; set; }
         public int CountRight { get; set; }
         public int CountWrong { get; set; }
+        public string Error { get; set; }
     }
+
+    public class ResultQuery
+    {
+        public bool IsSuccessful { get; set; }
+        public string Error { get; set; }
+    }
+
 
     public static class ResultsService
     {
+        private static NLog.Logger Nlogger = NLog.LogManager.GetCurrentClassLogger();
+
         public static IList<ResultDto> GetReport()
         {
             UserContext db = new UserContext();
@@ -43,6 +53,54 @@ namespace testing.Utils
             return null;
         }
 
+        internal static ResultQuery AddAnswer(string value, string login)
+        {
+            var result = new ResultQuery { Error = "", IsSuccessful = true };
+            try
+            {
+                var valueList = value.Split('_');
+                using (UserContext db = new UserContext())
+                {
+                    var findUser= db.User.Where(p => p.Login == login).FirstOrDefault();
+                    int answerId = Convert.ToInt32(valueList[1]);
+                    int questionId = Convert.ToInt32(valueList[0]);
+                    var answerFind = db.Answers.Where(p => p.Id == answerId).FirstOrDefault();
+                    int resultAnswer = answerFind.IsRight ? 1 : 0;
+                    var questionFind = db.Question.Where(p => p.Id == questionId).FirstOrDefault();
+                    Result resultNew = new Result { Name = valueList[2], Date = DateTime.Now.ToShortDateString(), User = findUser ,
+                        Answer = answerFind, Question = questionFind, ResultAnswer = resultAnswer};
+                    db.Results.Add(resultNew);
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Error = "При добавлении ответа возникла ошибка!value = " + value + "; login = " + login + "; " + ex.Message;
+                result.IsSuccessful = false;
+                Nlogger.Error("При добавлении ответа возникла ошибка! value=" + value + ";login=" + login + ";" + ex.Message + ";" + ex.InnerException);
+            }
+            return result;
+        }
 
+        internal static bool IsAnswerRight(string value)
+        {
+            try
+            {
+                var valueList = value.Split('_');
+                using (UserContext db = new UserContext())
+                {
+                    int answerId = Convert.ToInt32(valueList[1]);
+                    var answerFind = db.Answers.Where(p => p.Id == answerId).FirstOrDefault();
+                    if (answerFind.IsRight)
+                        return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Nlogger.Error("При IsAnswerRight возникла ошибка! value=" + value + ";" + ex.Message + ";" + ex.InnerException);
+            }
+            return false;
+            
+        }
     }
 }
